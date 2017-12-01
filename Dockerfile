@@ -5,7 +5,7 @@ ENV NB_UID 1000
 ENV HOME /home/${NB_USER}
 
 RUN pip install --no-cache-dir notebook==5.*
-
+USER root
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
